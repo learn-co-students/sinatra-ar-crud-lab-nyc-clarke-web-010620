@@ -1,0 +1,18 @@
+Title: <%= @article.title %>
+
+ <br>
+
+<form>
+Content: 
+<textarea rows="4" cols="50">
+
+<%= @article.content %>
+
+
+</textarea>
+</form>
+
+<form action="/articles/<%= @article.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
